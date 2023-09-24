@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url(images/home_header.jpg);
+}
+
+/* header */
+
+.header{
+    min-height: 10vh;
+    width: 100%;
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a h1{
+    font-size: 42px;
+    color: #fff;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #fff;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #3BC4FF;
+    display: block;
+    margin: auto;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+
+/* form */
+
+.main{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background: black;
+    border-radius: 7px;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+    width: 400px;
+    max-width: 100%;
+    color: #fff;
+}
+
+.title{
+    font-size: 34px;
+    font-weight: 500;
+    padding: 20px 40px;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+}
+
+.main form{
+    padding: 30px 40px;
+}
+
+.input-box{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.input-box label{
+    margin-top: 5px;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.input-box input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 14px;
+    width: 95%;
+    padding: 10px;
+}
+
+.input-box small{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #e74c3c; 
+}
+
+.check-box input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+}
+.check-box small{
+    visibility: hidden;
+    display: block;
+    bottom: 0;
+    left: 0;
+    color: #e74c3c;
+}
+
+.button button{
+    display: block;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 95%;
+    border: 2px solid #fff;
+    background-color: black;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.button button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+/* error message */
+
+.input-box.success input{
+    border-color: #2ecc71;
+}
+
+.input-box.error input{
+    border-color: #e74c3c;
+}
+
+.input-box.error small{
+    visibility: visible;
+}
+
+.check-box.error small{
+    visibility: visible;
+}
+
+/* footer */
+
+.footer{
+    min-height: 10vh;
+    width: 100%;
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.footer h3{
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.footer p{
+    font-size: 14px;
+    color: #fff;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer i{
+    color: #fff;
+}
+
+.footer .row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content{
+    margin: 30px 50px;
+    flex-basis: 25%;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+@media(max-width: 1200px){
+    .footer .row{
+        flex-direction: column;
+    }
+    .footer-content{
+        margin: 10px 50px;
+    }
+}
+
+@media(max-width: 700px){
+    .footer h3{
+        font-size: 15px;
+        margin-bottom: 3px;
+    }
+    .footer p{
+        font-size: 10px;
+    }
+    .footer a{
+        font-size: 10px;
+    }
+}
